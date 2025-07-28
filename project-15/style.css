@@ -1,0 +1,345 @@
+* {
+    /* اذا انحف Inter بحط الخيار التاني */
+    font-family: "Inter", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* import to sratic font  */
+/
+/* @font-face{
+    font-family: "Inter";
+    font-weight:700;
+    src: url() format("");
+} */
+/* @font-face{
+    font-family: "Inter";
+    font-weight:800;
+    src: url() format("");
+} */
+:root {
+    --off-white-color: #FFFDFA;
+    --silver-color: #c5c6ce;
+    --dark-silver-color: #5e607a;
+    --dark-blue-color: #00001A;
+    --oranges-red-color: #F15D51;
+    --yellow-color: #e9aa52;
+
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    padding: 2.8rem 0;
+    /* padding: 8rem 0; */
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+.body {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.6rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 111rem;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.navigation {
+    display: flex;
+    /* justify-content: space-between  بستخدمهم لما بدي اوزع على الاطراف */
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5.5rem;
+}
+
+.navigation-logo {
+    width: 6.4rem;
+}
+
+.navigation-list {
+    /* list بدي اوزعها بالسطر */
+    /* display: flex; */
+    /* بحول لجوال بدي اخفي القائمة */
+    display: none;
+    align-items: center;
+    /* يلي تحت نفس تاثير يلي فوق */
+    /* flex-direction: row; */
+    /* للمسافة بين الكلمات نستخدم gap */
+    gap: 4rem;
+}
+
+.navigation-link {
+    /* استخدمت حطيتهم بشي مشترك وبحطه جنب اسم الكلاس */
+    /* font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.6rem; */
+    /*  عشان اشيل الخط يلي تحت الرابط */
+    text-decoration: none;
+    color: var(--dark-silver-color);
+    transition: 150ms color linear;
+}
+
+.navigation-link:hover {
+    color: #F15D51;
+}
+
+..navigation-open-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.navigation-open-button img {
+    width: 4rem;
+}
+
+.hero {
+    display: grid;
+    /* grid-template-columns: 2fr 1fr; */
+    /* بدي احوله لعمود واحد بالجوال */
+    /* وتحت بال media gسطح المكتب برجهع زي ما كان  */
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 7rem;
+}
+
+/* نفس النيجة يلي فوق */
+
+/* .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.hero-featured {
+    grid-column: 1/3;
+} */
+.hero-featured {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    /* تحويلة التابلت   */
+    grid-template-columns: 1fr;
+    grid-template-rows: 30rem 1fr;
+    gap: 2.8rem;
+}
+
+.hero-featured img {
+    grid-column: 1/-1;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-featured-title h1 {
+    font-size: 5.6rem;
+    font-weight: 800;
+    /*  line-height المسافة بين الكلمات تزيد اذا كانت نفس font size  والعملية تتم بضرب حجم الخط ب  line-height وبطلع الناتج  بحطها 1 وهكذا  */
+    line-height: 1;
+    color: #00001A;
+}
+
+.hero-featured-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero-featured-details p {
+    /* font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.6rem; */
+    color: var(--dark-silver-color);
+    margin-bottom: 2.9rem;
+}
+
+.hero-featured-details a {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    /* لجعل كل الحروف كبيرة */
+    text-transform: uppercase;
+    text-decoration: none;
+    /* مسافة بين الاحرف */
+    letter-spacing: 0.4rem;
+    color: #00001A;
+    background-color: #F15D51;
+    padding: 1.2rem 3.2rem;
+    margin-top: auto;
+    /* all uahk اللون والخلفية هاد للحركة عند الضغط او لما يجي الماوس */
+    transition: 150ms all linear;
+
+}
+
+/*الضغظ عليه يتغير عند */
+.hero-featured-details a:hover {
+    color: #FFFDFA;
+    ;
+    background-color: #00001A;
+}
+
+.hero-latest {
+    background-color: #00001A;
+    padding: 3.2rem 2.4rem;
+}
+
+.hero-latest-title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #e9aa52;
+    margin-bottom: 3.4rem;
+}
+
+/* هاي الطريقة كنه اضفت عنصر مش موجود ب Html after بضيفها بعد  ,before بحطها قبل يعتبر عنصر وهمي ما بقدر اعمل selet غليه */
+/* .hero-latest-list-item::after {
+    content: "Read more";
+    color: #e9aa52;
+    ;
+} */
+/* :not(:last-child)  ما بدي تضيف خط لاخر ابن */
+/* :not(:first-child)::before */
+.hero-latest-list-item:not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 0.1rem;
+    background-color: #5e607a;
+    margin: 3rem 0;
+    color: #e9aa52;
+    ;
+}
+
+.hero-latest-article a {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 2.4rem;
+    text-decoration: none;
+    color: #FFFDFA;
+    margin-bottom: 0.8rem;
+    transition: 150ms color linear;
+
+}
+
+.hero-latest-article a:hover {
+    color: #e9aa52;
+}
+
+.hero-latest-article p {
+    /* font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.6rem; */
+    color: #c5c6ce;
+}
+
+.news {
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* لتحويلة  الجوال */
+    /* وبحط تحت للمكتب 3fr3 و التابلت fr2 */
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
+}
+
+.news article {
+    display: flex;
+    gap: 2rem;
+}
+
+.news article img {
+    width: .4rem;
+    flex-basis: 10rem;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.news article div {
+    display: flex;
+    flex-direction: column;
+}
+
+.news article div span {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #F15D51;
+    margin-bottom: 1.2rem;
+}
+
+.news article div a {
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 2.4rem;
+    text-decoration: none;
+    color: #00001A;
+}
+
+.news article div p {
+    /* font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.6rem; */
+    color: #5e607a;
+}
+
+@media only screen and (min-width:768px) {
+    body {
+        padding: 4rem 0;
+    }
+
+    .navigation-list {
+        display: flex;
+    }
+
+    .navigation-open-button {
+        display: none;
+    }
+
+    .hero-featured {
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .news {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+@media only screen and (min-width:1024px) {
+    body {
+        padding: 8rem 0;
+    }
+
+    .hero {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .news {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+}

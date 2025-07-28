@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hadeel Abed - My Projects</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f1f3f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2e7d32;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .project-card a {
+      text-decoration: none;
+      color: #1565c0;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .project-card a:hover {
+      color: #0d47a1;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 50px;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Hello, I’m Hadeel 👋</h1>
+    <p>I’m a Computer Engineering student. Here is a list of some of my projects hosted on GitHub Pages:</p>
+
+    <div class="projects">
+      <div class="project-card">
+        <a href="https://hadeel-abed.github.io/project1" target="_blank">Project 1 - ToDo List</a>
+      </div>
+      <div class="project-card">
+        <a href="https://hadeel-abed.github.io/project2" target="_blank">Project 2 - Personal Profile Page</a>
+      </div>
+      <div class="project-card">
+        <a href="https://hadeel-abed.github.io/project3" target="_blank">Project 3 - Calculator</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      &copy; 2025 - Hadeel Abed
+    </div>
+  </div>
+
+</body>
+</html>

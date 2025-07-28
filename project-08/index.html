@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+  <div class="row pt-5">
+    <div class="col">
+      <div class="card">
+  <div class="card-body">
+     <h5 class="card-title">ToDo list</h5>
+   <ul id="tasks-list" class="list-group">
+  <!-- <li class="list-group-item">First Task</li> -->
+</ul>
+  </div>
+</div>
+    </div>
+  </div>
+  <div class="row pt-3">
+    <div class="col">
+      <div class="card">
+  <div class="card-body">
+     <h5 class="card-title">Add new Task</h5>
+     <div class="row">
+      <div class="col">
+        <form action="" onsubmit="addTask(event)">
+          <div class="row">
+            <div class="col">
+              <input type="text" id="task" class="form-control" placeholder="write your task...">
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-submit">Add</button>
+            </div>
+          </div>
+        </form>
+      </div>
+     </div>
+ 
+</ul>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+  <script src="index.js">
+  </script>
+</body>
+</html>

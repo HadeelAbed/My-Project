@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --backgroung-color: #09090b;
+    --foregroundtext-color: #fafafa;
+    --card-color: #18181b;
+    --button-color: #27272a;
+    --paragraph-color: #71717a;
+    --primary-color: #4c503d;
+}
+
+body {
+    font-family: sans-serif;
+    color: var(--foregroundtext-color);
+    background-color: var(--backgroung-color);
+}
+
+main {
+    width: 100%;
+    max-width: 400px;
+    background: var(--card-color);
+    padding: 40px;
+    border-radius: 8px;
+    /* center */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.profile {
+    position: relative;
+}
+
+.image {
+    position: relative;
+    /* تحديد البداية بالمنتصف */
+    left: 50%;
+    /* تعديل المكان (تحريك) */
+    transform: translatex(-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* if image not squre use */
+    object-fit: cover;
+    margin-bottom: 24px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 3px;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 36px;
+}
+
+p {
+    font-size: 14px;
+    text-align: center;
+    color: var(--paragraph-color);
+    margin-bottom: 18px;
+}
+
+ul {
+    list-style: none;
+}
+
+.social-link li:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+a {
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    color: var(--foregroundtext-color);
+    background-color: var(--button-color);
+    padding: 16px;
+    border-radius: 8px;
+    transition: 100ms all ease-in-out;
+}
+
+a:hover {
+    color: var(--backgroung-color);
+    background-color: var(--foregroundtext-color);
+}
